@@ -14,6 +14,15 @@ app.use(express.json());
 app.use("/", router);
 app.listen(port, () => console.log("Server Running"));
 
+
+// const express = require('express')
+// const app = express()
+// app.all('/', (req, res) => {
+//     console.log("Just got a request!")
+//     res.send('Yo!')
+// })
+// app.listen(process.env.PORT || 3000)
+
 const transporter = nodemailer.createTransport({
   service: "gmail",
   host: "smtp.gmail.com",
@@ -33,7 +42,7 @@ transporter.verify((error) => {
     }
   });
 
-  router.post("/", (req, res) => {
+  router.all("/", (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const subject = req.body.subject;
