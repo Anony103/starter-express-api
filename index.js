@@ -109,7 +109,7 @@ transporter.verify((error) => {
               <div style="font-size: .8rem; margin: 0 30px">
                 <p>Name: <b>${name}</b></p>
                 <p>Email: <b>${email}</b></p>
-                <p style="font-size: 20px;"><i>${ticketType}</i></p>
+                <p style="font-size: 20px;">Ticket Type: <i>${ticketType}</i></p>
               </div>
             </div>
           </div>
