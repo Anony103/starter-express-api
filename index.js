@@ -89,7 +89,8 @@ transporter.verify((error) => {
     const email = req.body.email;
     const phoneNumber = req.body.phoneNumber;
     const subject = req.body.subject;
-    const ticketType = req.body.ticketType; 
+    const ticketType = req.body.ticketType;
+    const bookingId = req.body.bookingId;
         const mail = {
           from: email,
           to: useremail,
@@ -111,6 +112,7 @@ transporter.verify((error) => {
                 <p>Name: <b>${name}</b></p>
                 <p>Email: <b>${email}</b></p>
                 <p>Phone No: <b>${phoneNumber}</b></p>
+                <p>Booking Id: <b>${bookingId}</b></p>
                 <p style="font-size: 20px;">Ticket Type: <i>${ticketType}</i></p>
               </div>
             </div>
