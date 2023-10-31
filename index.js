@@ -57,7 +57,7 @@ transporter.verify((error) => {
       <div style="width: 100%; height: 100px; border-radius:20px 20px 0px 0px; justify-content: center;text-align: center;">
       <a href="http://www.r16services.com/" target="_blank"><img
           src="https://firebasestorage.googleapis.com/v0/b/root16-3979e.appspot.com/o/root_16-removebg-preview.png?alt=media&token=75e81206-ee9d-4fc1-b310-23e4abe162e5"
-          style="width: 150px; height: 150px; "
+          style="width: 200px; height: 200px; "
         /></a>
       </div>
         <div style="width: 100%; gap: 10px; padding: 30px 0; display: grid">
@@ -87,6 +87,7 @@ transporter.verify((error) => {
   router.all("/book", (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
+    const phoneNumber = req.body.phoneNumber;
     const subject = req.body.subject;
     const ticketType = req.body.ticketType; 
         const mail = {
@@ -99,7 +100,7 @@ transporter.verify((error) => {
           <div style="width: 100%; height: 100px; border-radius:20px 20px 0px 0px; justify-content: center;text-align: center;">
           <a href="http://www.r16services.com/" target="_blank"><img
               src="https://firebasestorage.googleapis.com/v0/b/root16-3979e.appspot.com/o/root_16-removebg-preview.png?alt=media&token=75e81206-ee9d-4fc1-b310-23e4abe162e5"
-              style="width: 150px; height: 150px; "
+              style="width: 200px; height: 200px; "
             /></a>
           </div>
             <div style="width: 100%; gap: 10px; padding: 30px 0; display: grid">
@@ -109,6 +110,7 @@ transporter.verify((error) => {
               <div style="font-size: .8rem; margin: 0 30px">
                 <p>Name: <b>${name}</b></p>
                 <p>Email: <b>${email}</b></p>
+                <p>Phone No: <b>${phoneNumber}</b></p>
                 <p style="font-size: 20px;">Ticket Type: <i>${ticketType}</i></p>
               </div>
             </div>
